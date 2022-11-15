@@ -19,15 +19,22 @@ if(inputReady){
 if(pc.pressedStart || pc.pressedRoll){
 	
 	if(display.nxt[cursor] == -1){
+		getStoryOutcome(display.hpn[cursor]);
+		
+		
 		instance_destroy(f);
 		instance_destroy();
+		
+		pc.skipInFrame = true;
 	} else {
+		
 		line = display.nxt[cursor];
 		display = getStory(pc.scene, line);
 		cursor = 0;
 		cursorMax = array_length(display.rsp);
 		display.msg = stringInsertBreaks(display.msg);
 		f.sprite_index = display.pic;
+		
 	}
 	
 	

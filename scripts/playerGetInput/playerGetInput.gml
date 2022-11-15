@@ -41,6 +41,9 @@ function playerGetInput(){
 	holdingRoll = keyboard_check(vk_space) || gamepad_button_check(ww.gamepadID, gp_face1);
 	pressedRoll = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(ww.gamepadID, gp_face1);
 	
+	holdingCast = keyboard_check(ord("3")) || gamepad_button_check(ww.gamepadID, gp_face2);
+	pressedCast = keyboard_check_pressed(ord("3")) || gamepad_button_check_pressed(ww.gamepadID, gp_face2);
+	
 	holdingChop = keyboard_check(ord("1")) || gamepad_button_check(ww.gamepadID, gp_face3);
 	pressedChop = keyboard_check_pressed(ord("1")) || gamepad_button_check_pressed(ww.gamepadID, gp_face3);
 	

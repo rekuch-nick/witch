@@ -12,7 +12,8 @@ if(firstFrame){
 	
 }
 
-
+xLast = x;
+yLast = y;
 
 x += xSpeed;
 y += ySpeed;
@@ -21,7 +22,7 @@ image_angle += rot;
 
 
 dis -= abs(xSpeed) + abs(ySpeed);
-
+if(pointInBlock(x, y)){ dis = 0; }
 
 
 if(dis < 1){

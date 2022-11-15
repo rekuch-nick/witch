@@ -9,6 +9,7 @@ function getStory(s, l){
 				hed: "Gary:",
 				rsp: [".."],
 				nxt: [2],
+				hpn: [""],
 			}
 		}
 		
@@ -20,6 +21,7 @@ function getStory(s, l){
 				hed: "Gary:",
 				rsp: [".."],
 				nxt: [3],
+				hpn: [""],
 			}
 		}
 		
@@ -30,6 +32,7 @@ function getStory(s, l){
 				hed: "Urma:",
 				rsp: ["yes", "no", "maybe"],
 				nxt: [4, 5, 6],
+				hpn: ["", "", ""],
 			}
 		}
 		
@@ -40,6 +43,7 @@ function getStory(s, l){
 				hed: "Gary:",
 				rsp: [".."],
 				nxt: [-1],
+				hpn: [""],
 			}
 		}
 		
@@ -50,6 +54,7 @@ function getStory(s, l){
 				hed: "Gary:",
 				rsp: [".."],
 				nxt: [-1],
+				hpn: [""],
 			}
 		}
 		
@@ -60,6 +65,7 @@ function getStory(s, l){
 				hed: "Gary:",
 				rsp: [".."],
 				nxt: [-1],
+				hpn: [""],
 			}
 		}
 		
@@ -67,15 +73,83 @@ function getStory(s, l){
 		
 		
 		
+	}
+	
+	if(s == 2){ // leave room1
 		
-		
-		
+		if(l == 1){
+			return {
+				msg: "Head into the cave?",
+				pic: imgBlank,
+				hed: "",
+				rsp: ["yes", "no"],
+				nxt: [-1, -1],
+				hpn: [">Room2", ""],
+			}
+		}
 		
 	}
 	
 	
 	
-	
+	if(s == 3){ // Urma asks about spells
+		
+		if(l == 1){
+			return {
+				msg: "I've got a terrible feeling about all this. Do you feel it too?",
+				pic: imgTalkUrma,
+				hed: "Urma:",
+				rsp: [".."],
+				nxt: [2],
+				hpn: [""],
+			}
+		}
+		
+		if(l == 2){
+			return {
+				msg: "It's one of the Iron Dragon's powers, its very presence inspires magical fear.",
+				pic: imgTalkPlayer01,
+				hed: "Gary:",
+				rsp: [".."],
+				nxt: [3],
+				hpn: [""],
+			}
+		}
+		
+		if(l == 3){
+			return {
+				msg: "Like a frog with yellow spots?",
+				pic: imgTalkUrma,
+				hed: "Urma:",
+				rsp: ["yes", "no"],
+				nxt: [4, 5],
+				hpn: [""],
+			}
+		}
+		
+		if(l == 4){
+			return {
+				msg: "Exactly. But isntead of poison, it has metal claws and firey breath.",
+				pic: imgTalkPlayer01,
+				hed: "Gary:",
+				rsp: [".."],
+				nxt: [-1],
+				hpn: [""],
+			}
+		}
+		
+		if(l == 5){
+			return {
+				msg: "This is no fog we're hunting, take it seriously.",
+				pic: imgTalkPlayer01,
+				hed: "Gary:",
+				rsp: [".."],
+				nxt: [-1],
+				hpn: [""],
+			}
+		}
+		
+	}
 	
 	
 }

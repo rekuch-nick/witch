@@ -6,6 +6,7 @@ line = 1;
 
 display = getStory(pc.scene, line);
 display.msg = stringInsertBreaks(display.msg);
+f.sprite_index = display.pic;
 
 cursor = 0;
 cursorMax = array_length(display.rsp);

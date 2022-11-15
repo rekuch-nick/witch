@@ -1,6 +1,6 @@
 image_xscale = 4;
 image_yscale = 4;
-
+xLast = x; yLast = y;
 
 rot = -30 * pc.facing;
 image_alpha = .5;
@@ -10,3 +10,6 @@ firstFrame = true;
 moveSpeed = 12;
 
 dis = 300;
+
+kbPow = 0;
+hpPow = 4;
